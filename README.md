@@ -187,6 +187,7 @@ Se mesmo assim o erro persistir, siga os seguintes passos:
 npx knex migrate:rollback --all
 ```
 2 - Delete o arquivo `db.sqlite` (caso o arquivo não esteja aparecendo, reinicie o VSCODE)
+
 3 - Rode o comando 
 ```bash
 npx knex migrate:list
