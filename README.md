@@ -23,11 +23,16 @@
   - [Erro Could not install from.. ao tentar executar o create-react-app com o npx](#erro-could-not-install-from-ao-tentar-executar-o-create-react-app-com-o-npx)
   - [Erro O termo node não é reconhecido como nome de cmdlet ou O termo npm não é reconhecido como nome de cmdlet](#erro-o-termo-node-não-é-reconhecido-como-nome-de-cmdlet-ou-o-termo-npm-não-é-reconhecido-como-nome-de-cmdlet)
   - [Configuração de pasta no VSCode](#configuração-de-pasta-no-vscode)
+  - [Erro ao criar projeto ReactJS](#erro-ao-criar-projeto-reactjs)
+  - [Erro Error: SSL connect error](#erro-error-ssl-connect-error)
 - [02 - Base da Aplicação](#02-base-da-aplicação)
+
   - [Erro Error: Undefined binding(s) when compiling FIRST](#erro-error-undefined-bindings-when-compiling-first)
   - [Erro Make sure you configure your 'user.name' and 'user.email' in git](#erro-make-sure-you-configure-your-username-and-useremail-in-git)
   - [Erro nas migrações](#erro-nas-migrações)
   - [Erro ao utilizar o Postman ou o Insomnia](#erro-ao-utilizar-o-postman-ou-o-insomnia)
+  - [Erro ao subir o Projeto para o Github](#erro-ao-subir-o-projeto-para-o-github)
+
 - [03 - Interface Web](#03-interface-web)
 - [04 - App Mobile](#app-mobile)
 
@@ -183,6 +188,32 @@ Se suas configurações de pasta estiverem igual à imagem acima, execute o pass
 
 Caso ainda continue como a imagem, reiniciar o VSCode.
 
+### Erro ao criar projeto Reactjs
+
+Se ao tentar criar o projeto ReactJS você não tiver sucesso utilizando `npx` ou `create-react-app` ou `yarn` , você pode utilizar o template `a seguir como base
+
+<a href="https://github.com/Rocketseat/template-reactjs-cra">Template Base React</a>.
+
+Pra baixar ele você executar os seguintes passos
+
+```
+1 - Abrir o terminal
+2 - Na pasta onde você quer baixar ele executar o comando
+    git clone https://github.com/Rocketseat/template-reactjs-cra.git frontend
+3 - cd frontend
+4 - npm install
+```
+
+#### Obs: Não esquecer de remover a pasta .git do projeto frontend
+
+Feito isso, o projeto já estará disponível para uso
+
+### Erro Error: SSL connect error
+
+Verifique se na URL do Insomnia você está passando `https`, se sim, alterar para `http`
+
+Se ao executar o insomnia você o
+
 ### **02 - Base da Aplicação**
 
 #### Erro `Error: Undefined binding(s) when compiling FIRST`
@@ -249,6 +280,23 @@ const cors = require("cors");
 ```js
 app.use(cors());
 ```
+
+### Erro ao subir o Projeto para o Github
+
+<img src="./.github/assets/github.png" alt="Github">
+
+Se ao subir o projeto para o Github você encontrar a imagem acima, executar os seguintes passos
+
+```
+1 - Navegar até sua pasta Frontend
+2 - Remover a pasta .git (Caso esteja no windows, verificar se está mostrando todas as pastas ocultas)
+3 - Renomear a pasta Frontend
+4 - No terminal, na pasta raiz do projeto executar git add .
+5 - git commit -m "Alteração de pasta"
+6 - git push
+```
+
+Com isso sua pasta Frontend deverá estar completa.
 
 ### **03 - Interface Web**
 
