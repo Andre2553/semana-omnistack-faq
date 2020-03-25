@@ -46,7 +46,7 @@ Tente adicionar o seguinte na variável de ambiente Path:
 
 `C:\Windows\System32`
 
-**Dificuldade para sair da system32/navegar entre as pastas**
+#### Dificuldade para sair da system32/navegar entre as pastas
 
 Execute os comandos no terminal:
 
@@ -58,7 +58,7 @@ Execute os comandos no terminal:
 6 - `mkdir backend`
 7 - `cd backend`
 
-**Erro na instalação do chocolatey: `Impossível converter o valor '3312' para o tipo 'System...`**
+#### Erro na instalação do chocolatey: `Impossível converter o valor '3312' para o tipo 'System...`
 
 1 - Abra o Powershell no modo administrador e execute `get-host`. 
 
@@ -68,11 +68,11 @@ Execute os comandos no terminal:
 
 4 - Reinicie sua máquina e tente instalar o chocolatey novamente usando o Powershell no modo administrador
 
-**JSON do Diego no Google Chrome está com aparência diferente**
+#### JSON do Diego no Google Chrome está com aparência diferente
 
 Instale a Extensão JSON Viewer - https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related?hl=pt-BR
 
-**Erro `Error: listen EADDRINUSE :::3333`**
+#### Erro `Error: listen EADDRINUSE :::3333`
 
 A porta já está em uso, para resolver isso você pode encerrar o processo que está rodando nessa porta executando o comando:
 
@@ -85,7 +85,7 @@ pkill node
 taskkill /f /im node.exe
 ```
 
-**Erro `System limit for number of file watchers reached`**
+#### Erro `System limit for number of file watchers reached`
 
 Execute o seguinte comando no terminal:
 
@@ -93,7 +93,7 @@ Execute o seguinte comando no terminal:
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-**Erro `Could not install from..` ao tentar executar o create-react-app com o npx**
+#### Erro `Could not install from..` ao tentar executar o create-react-app com o npx
 
 Esse erro está acontecendo porque o seu usuário tem um espaço no nome. Mas você pode fazer o seguinte:
 
@@ -127,7 +127,7 @@ npm uninstall -g create-react-app
 create-react-app frontend
 ```
 
-**Erro `O termo node não é reconhecido como nome de cmdlet` ou `O termo npm não é reconhecido como nome de cmdlet`**
+#### Erro `O termo node não é reconhecido como nome de cmdlet` ou `O termo npm não é reconhecido como nome de cmdlet`
 
 Tente reiniciar o powershell e abrir como administrador. Se não funcionar, sigam esses passos:
 
@@ -149,11 +149,11 @@ obs: Troque o `{yourName}` do comando acima pelo nome do usuário da sua máquin
 
 ### **02 - Base da Aplicação**
 
-**Erro `Error: Undefined binding(s) when compiling FIRST`**
+#### Erro `Error: Undefined binding(s) when compiling FIRST`
 
 Verifique se você está passando as informações corretamente no body do insomnia e se está desestruturando corretamente do `request.body`. Se o erro persistir, apague a requisição no insomnia e a crie novamente.
 
-**Erro `Make sure you configure your 'user.name' and 'user.email' in git`**
+#### Erro `Make sure you configure your 'user.name' and 'user.email' in git`
 
 Execute esses comandos no terminal (Lembre de trocar John Doe para seu nome, e o e-mail para o email que você utiliza no github):
 ```bash
@@ -161,7 +161,7 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-**Erro nas migrações**
+#### Erro nas migrações
 
 Provavelmente é algum erro de digitação na hora de criar as migrations, caso queiram comparar, podem utilizar o repositório oficial para ver a diferença entre os códigos:
 
@@ -183,7 +183,7 @@ npx knex migrate:list
 npx knex migrate:latest
 ```
 
-**Erro ao utilizar o Postman ou o Insomnia**
+#### Erro ao utilizar o Postman ou o Insomnia
 
 Você pode utilizar o https://postwoman.io/.
 
