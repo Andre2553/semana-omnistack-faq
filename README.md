@@ -9,22 +9,25 @@
 ## Issues
 
 - [00 - Workshop Iniciantes](#00-workshop-iniciantes)
+  - [Onde estão os arquivos do Workshop?](#onde-estão-os-arquivos-do-workshop)
+  - [Onde encontro a logo?](#onde-encontro-a-logo)
 - [01 - Ambiente](#01-ambiente)
+  - [Erro app.ps1 não pode ser carregado](#erro-appps1-não-pode-ser-carregado)
 - [02 - Base da Aplicação](#02-base-da-aplicação)
 - [03 - Interface Web](#03-interface-web)
 - [04 - App Mobile](#app-mobile)
 
 ### **00 - Workshop Iniciantes**
 
-**Onde estão os arquivos do Workshop?**
+#### Onde estão os arquivos do Workshop?
 https://gist.github.com/maykbrito/4ed2051eab0d6f8dc96083a00996abf4
 
-**Onde encontro a logo?**
+#### Onde encontro a logo?
 https://i.imgur.com/27pdZLL.png
 
 ### **01 - Ambiente**
 
-**Erro `app.ps1 não pode ser carregado`**
+#### Erro `app.ps1 não pode ser carregado`
 
 Execute esse comando como administrador no seu powershell:
 
@@ -33,12 +36,11 @@ Set-ExecutionPolicy Unrestricted
 ```
 E depois tente executar o comando anterior novamente
 
-**Erro `npm ERR! code EPERM`  ao tentar executar um comando**
+#### Erro `npm ERR! code EPERM` ao tentar executar um comando
 
 Execute o comando fora do VSCode com o seu Powershell em modo Administrador
 
-
-**Erro `ENOENT` quando executa o comando `npm start` no Frontend**
+#### Erro `ENOENT` quando executa o comando `npm start` no Frontend 
 
 Tente adicionar o seguinte na variável de ambiente Path:
 
