@@ -21,7 +21,8 @@
   - [Erro Error: listen EADDRINUSE :::3333](#erro-error-listen-eaddrinuse-3333)
   - [Erro System limit for number of file watchers reached](#erro-system-limit-for-number-of-file-watchers-reached)
   - [Erro Could not install from.. ao tentar executar o create-react-app com o npx](#erro-could-not-install-from-ao-tentar-executar-o-create-react-app-com-o-npx)
-  - [Erro O termo node não é reconhecido como nome de cmdlet ou O termo npm não é reconhecido como nome de cmdlet](#erro-o-termo-node-não-é-reconhecido-como-nome-de-cmdlet-ou-o-termo-npm-não-é-reconhecido-como-nome-de-cmdlet)  
+  - [Erro O termo node não é reconhecido como nome de cmdlet ou O termo npm não é reconhecido como nome de cmdlet](#erro-o-termo-node-não-é-reconhecido-como-nome-de-cmdlet-ou-o-termo-npm-não-é-reconhecido-como-nome-de-cmdlet)
+  - [Configuração de pasta no VSCode](#configuração-de-pasta-no-vscode)
 - [02 - Base da Aplicação](#02-base-da-aplicação)
   - [Erro Error: Undefined binding(s) when compiling FIRST](#erro-error-undefined-bindings-when-compiling-first)
   - [Erro Make sure you configure your 'user.name' and 'user.email' in git](#erro-make-sure-you-configure-your-username-and-useremail-in-git)
@@ -33,9 +34,11 @@
 ### **00 - Workshop Iniciantes**
 
 #### Onde estão os arquivos do Workshop?
+
 https://gist.github.com/maykbrito/4ed2051eab0d6f8dc96083a00996abf4
 
 #### Onde encontro a logo?
+
 https://i.imgur.com/27pdZLL.png
 
 ### **01 - Ambiente**
@@ -47,13 +50,14 @@ Execute esse comando como administrador no seu powershell:
 ```bash
 Set-ExecutionPolicy Unrestricted
 ```
+
 E depois tente executar o comando anterior novamente
 
 #### Erro `npm ERR! code EPERM` ao tentar executar um comando
 
 Execute o comando fora do VSCode com o seu Powershell em modo Administrador
 
-#### Erro `ENOENT` quando executa o comando `npm start` no Frontend 
+#### Erro `ENOENT` quando executa o comando `npm start` no Frontend
 
 Tente adicionar o seguinte na variável de ambiente Path:
 
@@ -64,16 +68,16 @@ Tente adicionar o seguinte na variável de ambiente Path:
 Execute os comandos no terminal:
 
 1 - `cd ~/` (Isso irá pra usa pasta de **Documentos**)
-2 - `mkdir semanaomnistack11` (Isso irá criar um diretório chamado **omnistack11**) 
+2 - `mkdir semanaomnistack11` (Isso irá criar um diretório chamado **omnistack11**)
 3 - `cd semanaomnistack11`
 4 - `mkdir aulas`
-5 - `cd aulas` 
+5 - `cd aulas`
 6 - `mkdir backend`
 7 - `cd backend`
 
 #### Erro na instalação do chocolatey: `Impossível converter o valor '3312' para o tipo 'System...`
 
-1 - Abra o Powershell no modo administrador e execute `get-host`. 
+1 - Abra o Powershell no modo administrador e execute `get-host`.
 
 2 - Na linha `Version` verifique se a versão do seu Powershell está abaixo da 3. Se estiver, siga os passos abaixo.
 
@@ -90,10 +94,13 @@ Instale a Extensão JSON Viewer - https://chrome.google.com/webstore/detail/json
 A porta já está em uso, para resolver isso você pode encerrar o processo que está rodando nessa porta executando o comando:
 
 - Linux
+
 ```bash
 pkill node
 ```
--  Windows
+
+- Windows
+
 ```bash
 taskkill /f /im node.exe
 ```
@@ -147,7 +154,7 @@ Tente reiniciar o powershell e abrir como administrador. Se não funcionar, siga
 1 - Aperte a tecla Windows e na barra de pesquisa busque por Variáveis de ambiente e abra o a primeira opção do sistema;
 2 - Na janela que for aberta clique em Variáveis de Ambiente;
 3 - Na janela das variáveis use a segunda opção, Variáveis do Sistema e procure pela variável Path e clique em Editar ;
-4 - A janela com os valores das variáveis de ambiente pode abrir de 2 formas: a primeira é uma janela com os valores separados por linha, se for essa opção basta adicionar mais uma linha com o valor: `C:\Program Files\nodejs`. Mas caso abra apenas uma pequena janela com uma linha só com os valores separados por `;` vá até o final dessa linha, adicione mais um `;`  e depois o valor `C:\Program Files\nodejs`, lembrando que não pode ter espaço após o `;`  que você adicionou.
+4 - A janela com os valores das variáveis de ambiente pode abrir de 2 formas: a primeira é uma janela com os valores separados por linha, se for essa opção basta adicionar mais uma linha com o valor: `C:\Program Files\nodejs`. Mas caso abra apenas uma pequena janela com uma linha só com os valores separados por `;` vá até o final dessa linha, adicione mais um `;` e depois o valor `C:\Program Files\nodejs`, lembrando que não pode ter espaço após o `;` que você adicionou.
 5 - Feito isso salve, reinicie o seu PowerShell e tudo deve estar funcionando.
 
 Se mesmo assim não tiver funcionando, tente mais esses passos (lembre-se de tomar a mesma precaução com o `;`):
@@ -160,6 +167,22 @@ e
 
 obs: Troque o `{yourName}` do comando acima pelo nome do usuário da sua máquina
 
+### `Configuração de pasta no VSCode`
+
+<img alt="folder" src="./.github/assets/folder.png">
+
+Se suas configurações de pasta estiverem igual à imagem acima, execute o passo a passo à seguir:
+
+```
+  1 - No Vscode apertar Ctrl + Shift + P
+  2 - Digitar settings.json e clicar em enter
+  3 - Adicionar a seguinte propriedade
+           "explorer.compactFolders": false
+  4 - Salvar o arquivo
+```
+
+Caso ainda continue como a imagem, reiniciar o VSCode.
+
 ### **02 - Base da Aplicação**
 
 #### Erro `Error: Undefined binding(s) when compiling FIRST`
@@ -169,6 +192,7 @@ Verifique se você está passando as informações corretamente no body do insom
 #### Erro `Make sure you configure your 'user.name' and 'user.email' in git`
 
 Execute esses comandos no terminal (Lembre de trocar John Doe para seu nome, e o e-mail para o email que você utiliza no github):
+
 ```bash
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
@@ -182,17 +206,22 @@ https://github.com/josepholiveira/be-the-hero/
 
 Se mesmo assim o erro persistir, siga os seguintes passos:
 
-1 - Execute o comando: 
+1 - Execute o comando:
+
 ```bash
 npx knex migrate:rollback --all
 ```
+
 2 - Delete o arquivo `db.sqlite` (caso o arquivo não esteja aparecendo, reinicie o VSCODE)
 
-3 - Rode o comando 
+3 - Rode o comando
+
 ```bash
 npx knex migrate:list
 ```
-4 - Rode o comando 
+
+4 - Rode o comando
+
 ```bash
 npx knex migrate:latest
 ```
@@ -203,15 +232,20 @@ Você pode utilizar o https://postwoman.io/.
 
 Para isso, você precisa sempre lembrar de usar 127.0.0.1 no lugar de localhost e adicionar o CORS no seu backend (se você não adicionar ocorrer o erro **Error: Network Error. Check console for details**):
 
-1 - Adicione o CORS executando o seguinte comando no terminal: 
+1 - Adicione o CORS executando o seguinte comando no terminal:
+
 ```bash
 npm install cors
 ```
-2 - No seu arquivo index.js, adicione o seguinte no início do arquivo: 
+
+2 - No seu arquivo index.js, adicione o seguinte no início do arquivo:
+
 ```js
 const cors = require("cors");
 ```
+
 3 - Logo após o seu `const app = express();` adicione o seguinte:
+
 ```js
 app.use(cors());
 ```
