@@ -34,6 +34,9 @@
   - [Erro ao subir o Projeto para o Github](#erro-ao-subir-o-projeto-para-o-github)
 
 - [03 - Interface Web](#03-interface-web)
+  - [Erro URL contains XSS injection attempt](#erro-url-contains-xss-injection-attempt)
+  - [React StrictMode](#react-strictmode)
+  - [Layout fora do Padrão na Tela de Login](#layout-fora-do-padrão-na-tela-de-login)
 - [04 - App Mobile](#app-mobile)
 
 ### **00 - Workshop Iniciantes**
@@ -299,5 +302,36 @@ Se ao subir o projeto para o Github você encontrar a imagem acima, executar os 
 Com isso sua pasta Frontend deverá estar completa.
 
 ### **03 - Interface Web**
+
+### Erro `URL contains XSS injection attempt`
+
+Verifique se no submit do seu formulário você digitou `e.preventDefault()` corretamente.
+
+Caso o erro ainda persista, tente ir até o seu navegar e limpar tudo que existe depois do `http://localhost:3000/` tirando tudo que existir depois do `/`.
+
+Se mesmo assim o erro continuar, verifique se no seu form você passou o atributo `onSubmit={handleRegister}`, como no vídeo
+
+### React StrictMode
+
+O `React.StrictMode serve para fazer algumas verificações, mas caso você deseja remove-lo, pode fazer da forma à seguir:
+
+```js
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+Para mais informações, verifique a documentação <a href="https://pt-br.reactjs.org/docs/strict-mode.html">Documentação React.StrictMode</a>
+
+### Layout fora do Padrão na Tela de Login
+
+Caso o seu input esteja com input maior que o botão, verifique se no seu arquivo global.css está exatamente dessa forma no início do arquivo (atenção ao box-sizing: border-box;) :
+
+```js
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+```
 
 ### **04 - App Mobile**
