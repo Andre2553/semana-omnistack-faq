@@ -176,9 +176,9 @@ git config --global user.email johndoe@example.com
 
 #### Erro nas migrações
 
-Provavelmente é algum erro de digitação na hora de criar as migrations, caso queiram comparar, podem utilizar o repositório oficial para ver a diferença entre os códigos:
+Provavelmente é algum erro de digitação na hora de criar as migrations, caso queiram comparar, podem utilizar esse repositório para ver a diferença entre os códigos:
 
-https://github.com/Rocketseat/semana-omnistack-11
+https://github.com/josepholiveira/be-the-hero/
 
 Se mesmo assim o erro persistir, siga os seguintes passos:
 
