@@ -391,3 +391,7 @@ afterAll(async () => {
 ```
 
 Isso vai fazer que ao final de cada execução, ele faça um rollback nas migrations que foram executadas, para que na próxima já esteja tudo pronto para a execução, tirando essa responsabilidade do beforeEach.
+
+Caso o erro persista, verifique se sua migration está dando um `return` antes de `knex.schema.dropTable("ongs");`. Caso queira comparar o código da migration, podem olhar no seguinte repositório:
+
+https://github.com/josepholiveira/be-the-hero/blob/master/backend/src/database/migrations/20200324081951_create_ongs.js
