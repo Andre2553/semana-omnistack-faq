@@ -39,6 +39,11 @@
   - [Layout fora do Padrão na Tela de Login](#layout-fora-do-padrão-na-tela-de-login)
 - [04 - App Mobile](#app-mobile)
 
+* [05 - Funcionalidades avançadas](#05-funcionalidades-avançadas)
+  - [connect ECONNREFUSED 127.0.0.1:80](#connect-econnrefused-12700180)
+  - ["whatsapp" must be less than or equal to 10](#whatsapp-must-be-less-than-or-equal-to-10)
+  - [Erro no require generateUniqueId ao rodar npm test](#erro-no-require-generateuniqueid-ao-rodar-npm-test)
+
 ### **00 - Workshop Iniciantes**
 
 #### Onde estão os arquivos do Workshop?
@@ -335,3 +340,36 @@ Caso o seu input esteja com input maior que o botão, verifique se no seu arquiv
 ```
 
 ### **04 - App Mobile**
+
+### **05 - Funcionalidades Avançadas**
+
+### connect ECONNREFUSED 127.0.0.1:80
+
+Esse erro acontece quando o supertest não consegue encontrar sua rota. Possívelmente sua rota está errada no seu arquivo `ong.spec.js` ou faltou uma `/` antes da rota, segue um exemplo de como deveria estar:
+
+```js
+const response = await request(app).post("/ongs");
+```
+
+### "whatsapp" must be less than or equal to 10
+
+Nesse erro, você deve trocar de number() para string() pois o number irá validar o valor, e não o tamanho. Sendo assim deve ficar:
+
+```js
+whatsapp: Joi.string()
+  .required()
+  .min(10)
+  .max(11);
+```
+
+### Erro no require generateUniqueId ao rodar `npm test`
+
+Caso seu arquivo `generateUniqueId.js` esteja com um `export default`, troque ele para `module.exports =`, o arquivo deve ficar dessa forma:
+
+```js
+const crypto = require("crypto");
+
+module.exports = function generateUniqueId() {
+  return crypto.randomBytes(4).toString("HEX");
+};
+```
