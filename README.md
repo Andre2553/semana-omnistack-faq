@@ -43,6 +43,7 @@
   - [connect ECONNREFUSED 127.0.0.1:80](#connect-econnrefused-12700180)
   - ["whatsapp" must be less than or equal to 10](#whatsapp-must-be-less-than-or-equal-to-10)
   - [Erro no require generateUniqueId ao rodar npm test](#erro-no-require-generateuniqueid-ao-rodar-npm-test)
+  - [SQLITE_ERROR: table ongs already exists](#sqlite-error-table-ongs-already-exists)
 
 ### **00 - Workshop Iniciantes**
 
@@ -373,3 +374,20 @@ module.exports = function generateUniqueId() {
   return crypto.randomBytes(4).toString("HEX");
 };
 ```
+
+### SQLITE ERROR: table `ongs` already exists
+
+Para corrigir isso, você deve deixar o seu código no arquivo de testes da seguinte forma:
+
+```js
+beforeEach(async () => {
+  await connection.migrate.latest();
+});
+
+afterAll(async () => {
+  await connection.migrate.rollback();
+  await connection.destroy();
+});
+```
+
+Isso vai fazer que ao final de cada execução, ele faça um rollback nas migrations que foram executadas, para que na próxima já esteja tudo pronto para a execução, tirando essa responsabilidade do beforeEach.
